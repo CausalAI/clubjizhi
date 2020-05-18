@@ -1,0 +1,271 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "02-OneCausality.ipynb",
+      "provenance": [],
+      "collapsed_sections": [],
+      "toc_visible": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    },
+    "language_info": {
+      "codemirror_mode": {
+        "name": "ipython",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.6.7"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "colab_type": "text",
+        "id": "K2pGsumSjrP0"
+      },
+      "source": [
+        "# One Causality \n",
+        "\n",
+        "一个人，一篇论文，一个视频，一个slide, 一个会议，一个教程，一句话，说明因果推断。\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "colab_type": "text",
+        "id": "7H0tXWxlUVF_"
+      },
+      "source": [
+        "小图灵测试：How can machines represent causal knowledge in a way that would enable them to access the necessary information swiftly, answer questions correctly, and do it with ease, as a human can? "
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "colab_type": "text",
+        "id": "LmKbKuv2T90h"
+      },
+      "source": [
+        "## Judea Pearl\n",
+        "\n",
+        "Judea Pearl is credited for causal diagrams. 更多详细内容参考：\n",
+        "\n",
+        "- Homepage: http://bayes.cs.ucla.edu/jp_home.html\n",
+        "- [Survey of Judea Pearl](https://colab.research.google.com/drive/1s4d-FaNFmPQNCDJ187DK09liZoMO1PQP)\n",
+        "\n",
+        "更多因果研究工作者参考：https://sites.google.com/view/causal-inference-zerotoall/people"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "colab_type": "text",
+        "id": "vGylJ-dsUBl_"
+      },
+      "source": [
+        "## Seven Tools\n",
+        "\n",
+        "这是是一篇必须背诵的综述和启发性文章。该论文首先总结了当前AI面临的三个主要困难，指出教会机器因果推理能够解决这些困难。然后提出构建因果引擎的三级因果思维，指出当前机器学习算法都停留在第一个层面。最后综述了因果研究的七大方面内容。\n",
+        "- 论文地址：[The seven tools of causal inference, with reflections on machine learning](https://cacm.acm.org/magazines/2019/3/234929-the-seven-tools-of-causal-inference-with-reflections-on-machine-learning/fulltext). \n",
+        "- [论文解读 Pear 2019 seven tools of causal inference](https://colab.research.google.com/drive/1g-tQRd_r8uwAOwotxJisvpI5gzt0Zipi)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "colab_type": "text",
+        "id": "-Crg-1FU_Ur5"
+      },
+      "source": [
+        "\n",
+        "- ACM Mar. 2019 - The Seven Tools of Causal Inference\n",
+        "\n",
+        "该视频基本上就是 Judea Pearl 亲自向大家介绍他的论文 The seven tools of causal inference, with reflections on machine learning."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab_type": "code",
+        "id": "Ptjg_Kiv-Zi1",
+        "outputId": "4244cba9-4374-4ea0-aa8a-3528db1e2b5b",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 421
+        }
+      },
+      "source": [
+        "from IPython.display import YouTubeVideo\n",
+        "YouTubeVideo('CsMV5o3hotY', width=800, height=400)"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "image/jpeg": "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\nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//Z\n",
+            "text/html": [
+              "\n",
+              "        <iframe\n",
+              "            width=\"800\"\n",
+              "            height=\"400\"\n",
+              "            src=\"https://www.youtube.com/embed/CsMV5o3hotY\"\n",
+              "            frameborder=\"0\"\n",
+              "            allowfullscreen\n",
+              "        ></iframe>\n",
+              "        "
+            ],
+            "text/plain": [
+              "<IPython.lib.display.YouTubeVideo at 0x7f051dee9198>"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 1
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "colab_type": "text",
+        "id": "VF-yiZypUEbB"
+      },
+      "source": [
+        "## Video: The new science of cause inference\n",
+        "\n",
+        "我们推荐一个因果理论的介绍性视频。该一个多小时的视频是研究因果理论必看的。\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab_type": "code",
+        "id": "DZVhOchQBLFF",
+        "outputId": "f30689e7-19e4-43d7-8de5-c0c4992e3a92",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 321
+        }
+      },
+      "source": [
+        "from IPython.display import YouTubeVideo\n",
+        "YouTubeVideo('ZaPV1OSEpHw', width=600)\n",
+        "# A Introduction to Causal Inference \n",
+        "# Keynote: Judea Pearl - The New Science of Cause and Effect\n"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "image/jpeg": "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\nP5ozcHaWj67bbjdvNtyV2+ZIp++w1nCpVjrO8rVrXfF55sgyws1vj+aNZUJrfF5GiZWw+KqX13KV\n2m9aondpWTd3vtkZhQxUZRlGU1KKtGSqJOK4J3yRXEujo2rUipQimn36y6gb18JiaktaprTk98pT\nUnzbNI6PrJ3UbNd+supu9EV/B/VHqZ2NiPB/VHqDTpVhjJyjKc6kpQ7LlVu4+jbyM1ljakdWpUqT\ni/4ZVtZcmyLiNHVacdecbR3X1k/oyKBZVKWLnBU5ynKEd0XVvFeivY091xOv7S8tdZ63tFrc73IA\nAtacsdCKjGrVjFbkq1kvlrEf3LEWkrO0mnJa6za3N55kIAS9m1vD/VHqY2bW8P8AVHqRQBIq4KpC\nOtKNl6p/cjgAAAAAAAtNE9iXr9irLTRPYl6/YCTiuw/l9SNT7yViuw/l9SLT7yMnq4Okyn3ei+hy\nn2jtTWXyX0OM95zey9Isv2svU6dxzl+0l6nVLIpxx+W1sjWBv/Czrg6NSamqcXmlFvgnv3mNy9I9\nWLjqtrKV3F3Wdrct5xnInY/RdelFTlOM6UcouMrpX8ivuXjPTxZ5ZW+3KqdcPj6sI6qllwfccnmz\nWeRSNmInJyes7vv7zRHWtRcLXtmrpp3XM5BgZjJrc7GABY6OquTlfgjlpbtR9GZ0X2pei+pjS3aj\n6M1ttvavAAYAAAAAAAAAAAAABvRXxI0N6PaXqBYxpRTu9246Uqam8s1/rI0ow1+/Lv8AUlRgoLIh\nsaRp2yRjL0+5IjDJvMTw18yVacYRW9G1OPBK/E2jRlF3feS1GLSveLDYjxo8bM3hQTytmW2D0fKW\nbSsuK/MmYjQkacFNNtS8+O443lxldpx15uej6aT+FeZHw6nh5/AnOk7XV80+KLGtTlGTUt97WNYQ\nytFfc645OdxSo1ITjeNnly9eBtTjkQHTluUmnx/1vO+Ex0Las/hl57itp0j6fX6u/wCZHlz1On3+\nrStn8UczyxcRewAGsAAAAAAAAAAAAAAtNE9iXr9irLTRPYl6/YCView/l9SNT7yVXkoxbauvS/5E\nZYyK3R//ADIy7ejizmM9p1P7L6HCazNI6S8n/wAtdR7/AB8L+cF1Oeq9N58bNI3+1l6nbuRHpO8m\n27tknuRtZh7bPs/P7FloLHUqUakartrNOOV+4rX2SFVmr2Nk2nlz8dLnSulaVWLjF63m6erykn9i\njUjlN5m1N5FyaeTLLyrdHOobxeRhmpWWh6TjeU0rW1oyeerxaXHcSsVo2NSDkk1O109zfqiko1nT\nkn3d64+pYT0vJ3UNyWbbzfGxNl26S461VUzBMr0lKm6idndfO5CKck/RXal6IxpbtR9GZ0V2peiM\naW7UfRmivAAAAAAAAAAAAAAAAOuGV5xXmcjtg43qxXmBaQWolb5+dyRGnl8zFOaVrqy8iS4qUcnv\n7zmvTWFOzWefobN3kkzKTdllY6QcXrSi7tf6sTa3TVvh+eZLwdJykk7XabWV9xzai0nfdwXeZhNp\n3i2midqnp6CjjXG8bZ8XG1k+C3mstIKcdV71u9UVcabqQqScdacbfNcMiTofCqo9bVlG6yUsjy5c\net7emZTtAxtPWlrce42or4bvkW+maEFTeovii7vjLiU8XeOV+Z14rvHX05Z97YnTi3fvIdXCKTsr\nE2D+JJnSvSiviT9b5WOqXmdLUJwhlL4Ha6Tyb7mU5f6bm5UnZPVUkm+4oDtj045dgAKSAAAAAAAA\nAAAAABaaJ7EvX7FWWmiexL1+wE6UFJWctVcbN/kjn7vT/wB+v+XI6qpqfEpSi1ucd9yVDHYNP92f\naTXlFOLs7yzyUl53W455dqlQFh6e726/wSIuKhquUG84ya5OxZVsVh5RtTo6s24WlbdbtfxPe/Ld\nl5kDSC/S1f7yf/UzFyoVN6rJ3ciDJErDTvG3D6G2PRxXV06VXaDfkVk2WWJX6O67nn+ZVSZuLl+R\nf20XOkNxyR1W4t5263GDFzDYGsjW9ndGQzA12zBgXNFhortS9EY0t2o+jGie1L0Q0t2o+jArwAAA\nAAAAAAAAAAAADvgnarD1OB3wSvVh6gXcZXVmb0452V7b95yjG63d7ViRGSOa03Ubk92rbu33NYU1\nG6y87d74s3pLX5bjvSgkrc3xZFUiU1yvvO0qbd2t6V+GR2qUU7W3L6m0aeVkTtuk3CUfZ0JSha8r\nNvhkskc8LiHFWvZ6zz+f+ZMoQfsJfIpsXV1JyVst9zjnj5PTjdLGtUWed3xKqlG1S3is36nWjPK2\nRxj2na7tfMzgmrYzl96rvVoO+styyuc6kfafC8o99nvOFeq7b8rr18yZShqwv4rP5npjgrtPwisG\n9XxR3HkT1WnFJYSWWTnE8qdcenLLsABSQAAAAAAAAAAAAALTRPYl6/Yqy00T2Jev2Al4jsMh3JmI\n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\nXyOzq07/AMDtv+DtxtuStZO7t8lmPGHlXGniIQd4wzz3yvvXdkRibOpS9m0tVytbs2u/hV93k3e6\n35pkISSFuwrNLdqPoyzKzS3aj6M1ivAAAAAAAAAAAAAAAAJGBxKo1oVHFTUXfVbsn5XI4A9TS/Gb\nhlDDRS/nb+xMh/aJUSt7tD/G+h4oEzGRVyte3X9o1TP9Vg0+7XfQ2X9pNRf+1h/zH0PDA3SXuf8A\n1Jq3/dof430H/qTU/wDiw/xvoeGA0PbVP7RZyVnho2/vH0NY/wBoUln7rC/HXd/oeLA1G7r2T/tA\nqXv7tD/G+hsv7Q6nfhoP/jfQ8WBqHlXrf/7me/3eN/530C/HU0v3eP8AjfQ8kBqN8qvtL/iaWKou\nk6UY3ad1JvcyhANZbsAAYAAAAAAAAAAAAABaaJ7EvX7FWWmiexL1+wE8AAAAAAAAAAAAAAAAAAAA\nAMOKe9JmQBrqLguQ1FwXI2AGuouC5DUXBcjYAa6i4LkNRcFyNgBrqLguQ1FwXI2AGuouC5DUXBcj\nYAa6i4LkNRcFyNgBrqLguQ1FwXI2AGuouC5DUXBcjYAa6i4LkNRcFyNgBrqLguQ1FwXI2AGuouC5\nDUXBcjYAa6i4LkNRcFyNgBrqLguQ1FwXI2AGuouC5DUXBcjYAa6i4LkNRcFyNgBrqLguQ1FwXI2A\nGuouC5DUXBcjYAa6i4LkNRcFyNgBrqLguQ1FwXI2AGuouC5DUXBcjYAa6i4LkZSS3KxkAAAAAAAA\nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVO\n058I8n1G058I8n1AtgVO058I8n1G058I8n1AtgVO058I8n1G058I8n1AtgVO058I8n1G058I8n1A\ntgVO058I8n1G058I8n1AtgVO058I8n1G058I8n1AtgVO058I8n1G058I8n1AtgVO058I8n1G058I\n8n1AtgVO058I8n1G058I8n1AtgVO058I8n1G058I8n1AtgVO058I8n1G058I8n1AtgVO058I8n1G\n058I8n1AtgVO058I8n1G058I8n1AtgVO058I8n1G058I8n1AtgVO058I8n1G058I8n1AtgVO058I\n8n1G058I8n1AtgVO058I8n1G058I8n1AtgVO058I8n1G058I8n1AtgVO058I8n1G058I8n1AtgVO\n058I8n1G058I8n1AtgVO058I8n1G058I8n1AtgVO058I8n1G058I8n1AtgVO058I8n1G058I8n1A\ntgVO058I8n1G058I8n1AtgVO058I8n1G058I8n1AtgVO058I8n1G058I8n1AtgVO058I8n1G058I\n8n1AtgVO058I8n1G058I8n1AtgVO058I8n1G058I8n1AtgVO058I8n1G058I8n1AhAAAAAAAAAAA\nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\nA//Z\n",
+            "text/html": [
+              "\n",
+              "        <iframe\n",
+              "            width=\"600\"\n",
+              "            height=\"300\"\n",
+              "            src=\"https://www.youtube.com/embed/ZaPV1OSEpHw\"\n",
+              "            frameborder=\"0\"\n",
+              "            allowfullscreen\n",
+              "        ></iframe>\n",
+              "        "
+            ],
+            "text/plain": [
+              "<IPython.lib.display.YouTubeVideo at 0x7f051dee9a90>"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 5
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "colab_type": "text",
+        "id": "Vg4EJnOYUK-P"
+      },
+      "source": [
+        "## Slide\n",
+        "\n",
+        "Bernhard Schölkopf is a director at the Max Planck Institute for Intelligent Systems in Tübingen, Germany, where he heads the Department of Empirical Inference.\n",
+        "\n",
+        "Bernhard Scholkpf 关于 Causality for Machine Learning 的一个介绍\n",
+        "\n",
+        "https://drive.google.com/file/d/1YjkCTX_ns5ba4DvdNtfRcSBoAEFPXKuz/view"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "colab_type": "text",
+        "id": "kvZ2ZOOxUK5x"
+      },
+      "source": [
+        "## 一个会议\n",
+        "\n",
+        "AAAI-WHY 2019 Judea Pearl 邀请各路大牛关于因果与未来AI的会议。\n",
+        "\n",
+        "会议网址：https://why19.causalai.net/\n",
+        "\n",
+        "\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "colab_type": "text",
+        "id": "26Kh_pfRUK0j"
+      },
+      "source": [
+        "## Tutorial"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "colab_type": "text",
+        "id": "jYzLaE8QUKw5"
+      },
+      "source": [
+        "```\n",
+        "Tutorial on Causal Inference and Counterfactual Reasoning\n",
+        "Amit Sharma (@amt_shrma), Emre Kiciman (@emrek)\n",
+        "\n",
+        "ACM KDD 2018 International Conference on Knowledge Discovery and Data Mining, London, UK\n",
+        "\n",
+        "http://causalinference.gitlab.io/kdd-tutorial\n",
+        "\n",
+        "Code: http://github.com/Microsoft/dowhy\n",
+        "```\n",
+        "\n",
+        "该教程微软因果推理小组，在 ACM KDD 2018 一个关于因果推断非常详细清楚的介绍。Pearl的因果图模型是通向AGI的一个重要组件，但是由于其理论尚未完善（例如当前结果大部分都是建立在有向无环图的基础上，Bernhard 指出有环的情况难以处理），相关的实践并不多。相反在传统的因果推断理论在相关理论已经被广泛使用，该教程关注传统领域的因果效应估计问题，既讲清楚了因果理论的基础概念，又讲了很多直观简单的例子，所以非常推荐。"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "colab_type": "text",
+        "id": "pomJvcDsUKtT"
+      },
+      "source": [
+        ""
+      ]
+    }
+  ]
+}
