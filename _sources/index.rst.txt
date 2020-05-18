@@ -25,7 +25,6 @@
    notebooks/01-pearl
    notebooks/02_OneCausality
 
-   l
 Indices and Tables
 ==================
 
