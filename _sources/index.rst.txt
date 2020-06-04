@@ -1,9 +1,9 @@
-:github_url: https://sites.google.com/view/minituring/
+:github_url: https://github.com/CausalAI/clubjizhi
 
 集智因果读书会
 ===============================
 
-本 `项目 <https://sites.google.com/view/minituring>`_ 是关于因果推断的读书会 by 集智俱乐部; 大概会包含如下的内容:
+本 `项目 <https://causalai.github.io/clubjizhi/>`_ 是关于因果推断的读书会 by 集智俱乐部; 大概会包含如下的内容:
 
 1. 因果研究 Judea Pearl, Bernhard Scholkopf, Youshua Bengio 的工作
 2. 使用 DoWhy 和 Pyro 来因果推断实战
@@ -25,6 +25,12 @@
    
    notebooks/01-pearl
    notebooks/02_OneCausality
+
+You can see more information about causal inference on 
+
+- Causal AI: https://sites.google.com/view/minituring/home
+- Causal Inference Zero to All: https://sites.google.com/view/causal-inference-zerotoall/home
+
 
 Indices and Tables
 ==================
