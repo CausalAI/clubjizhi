@@ -16,6 +16,7 @@
 
    readme/pre
    readme/01-quick_survey
+   readme/02-time_series_causal_inference
 
 .. toctree::
    :glob:
