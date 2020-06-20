@@ -3,7 +3,9 @@
   {
    "cell_type": "markdown",
    "metadata": {
-    "Collapsed": "false"
+    "Collapsed": "false",
+    "colab_type": "text",
+    "id": "g1cYM4NP7j_W"
    },
    "source": [
     "# 读书会论文和教材清单\n",
@@ -38,7 +40,7 @@
    "metadata": {
     "Collapsed": "false",
     "colab_type": "text",
-    "id": "vGylJ-dsUBl_"
+    "id": "V5pvnFTh7j_b"
    },
    "source": [
     "\n",
@@ -48,7 +50,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 1,
+   "execution_count": null,
    "metadata": {
     "Collapsed": "false",
     "colab": {
@@ -79,7 +81,9 @@
       ]
      },
      "execution_count": 1,
-     "metadata": {},
+     "metadata": {
+      "tags": []
+     },
      "output_type": "execute_result"
     }
    ],
@@ -91,20 +95,25 @@
   {
    "cell_type": "markdown",
    "metadata": {
-    "Collapsed": "false"
+    "Collapsed": "false",
+    "colab_type": "text",
+    "id": "0Vgl8U1K7j_n"
    },
    "source": [
     "## Bernhard Scholkopf\n",
     "\n",
-    "Bernhard Scholkopf 有一篇必读的论文，被 Judea Pearl 亲自 twitter 点赞，并且该点赞被 Bernhard SCholkopf 立刻挂在了自己的个人主页炫耀。\n",
+    "Bernhard Scholkopf 有两篇必读的论文，被 Judea Pearl 亲自 twitter 点赞，并且该点赞被 Bernhard SCholkopf 立刻挂在了自己的个人主页炫耀。\n",
     "\n",
-    "- Causality for Machine Learning, Bernhard Schölkopf, 2019"
+    "- Causality for Machine Learning, Bernhard Schölkopf, 2019\n",
+    "- 因果推理的基础和新视野 by Bernhard Scholkopf 等团队 The workshop Foundations and new horizons for causal inference, organised by Nicolai Meinshausen (ETH Zurich), Jonas Peters (University of Copenhagen), Thomas Richardson (University of Washington) and Bernhard Scho ̈lkopf (MPI Tu ̈bingen) was well attended with 52 participants from a broad geographic back- ground."
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {
-    "Collapsed": "false"
+    "Collapsed": "false",
+    "colab_type": "text",
+    "id": "Bld3Hd0N7j_p"
    },
    "source": [
     "一个本结合机器学习和因果研究的教材\n",
@@ -115,7 +124,9 @@
   {
    "cell_type": "markdown",
    "metadata": {
-    "Collapsed": "false"
+    "Collapsed": "false",
+    "colab_type": "text",
+    "id": "3y2zIHya7j_r"
    },
    "source": [
     "## Yousha Bengio \n",
@@ -129,16 +140,23 @@
   {
    "cell_type": "markdown",
    "metadata": {
-    "Collapsed": "false"
+    "Collapsed": "false",
+    "colab_type": "text",
+    "id": "D99moFhy7j_s"
    },
    "source": [
     "## 综述文章\n",
     "\n",
     "\n",
+    "- J. Pearl, \"The Seven Tools of Causal Inference with Reflections on Machine Learning,\" July 2018. Communications of ACM, 62(3): 54-60, March 2019\n",
+    "- J. Pearl, \"Causal and counterfactual inference,\" October 2019. Forthcoming section in The Handbook of Rationality, MIT Press.\n",
+    "\n",
+    "- [Causality for Machine Learning](https://arxiv.org/abs/1911.10500) by Bernhard Scholkopf\n",
+    "\n",
     "- [A Survey of Learning Causality with Data: Problems and Methods 2019 arxiv](https://arxiv.org/abs/1809.09337)\n",
     "\n",
     "\n",
-    "（该论文全面的介绍了因果和机器学习的融合）The era of big data provides researchers with convenient access to copious data. However, people often have little knowledge about it. The increasing prevalence of big data is challenging the traditional methods of learning causality because they are developed for the cases with limited amount of data and solid prior causal knowledge. This survey aims to close the gap between big data and learning causality with a comprehensive and structured review of traditional and frontier methods and a discussion about some open problems of learning causality. We begin with preliminaries of learning causality. Then we categorize and revisit methods of learning causality for the typical problems and data types. After that, we discuss the connections between learning causality and machine learning. At the end, some open problems are presented to show the great potential of learning causality with data.\n",
+    "（该论文全面的介绍了因果和机器学习的融合）The era of big data provides researchers with convenient access to copious data. However, people often have little knowledge about it. The increasing prevalence of big data is challenging the traditional methods of learning causality because they are developed for the cases with limited amount of data and solid prior causal knowledge. This survey aims to close the gap between big data and learning causality with a comprehensive and structured review of traditional and frontier methods and a discussion about some open problems of learning causality. We begin with preliminaries of learning causality. Then we categorize and revisit methods of learning causality for the typical problems and data types. After that, we discuss the connections between learning causality and machine learning. At the end, some open problems are presented to show the great potential of learning causality with data. [github](https://github.com/rguo12/awesome-causality-algorithms)\n",
     "\n",
     "- [A Survey on Causal Inference](https://arxiv.org/abs/2002.02770) AAAI 2020 tutorial\n",
     "\n",
@@ -152,27 +170,208 @@
   {
    "cell_type": "markdown",
    "metadata": {
-    "Collapsed": "false"
+    "Collapsed": "false",
+    "colab_type": "text",
+    "id": "D99moFhy7j_s"
+   },
+   "source": [
+    "其他文章\n",
+    "\n",
+    "- 论文 A Second Chance to Get Causal Inference Right: A Classification of Data Science Tasks 值得一看，论文地址 https://amstat.tandfonline.com/doi/full/10.1080/09332480.2019.1579578#.XNLtxOszbOR 以及笔记 https://colab.research.google.com/drive/1rr2-EJ9yk117hdejTIvx2jWjaBbjsGsO?usp=sharing 本文说明了 The scientific contributions of data science can be organized into three classes of tasks: description, prediction, and counterfactual prediction.\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "Collapsed": "false",
+    "colab_type": "text",
+    "id": "0VcZ7f3N7j_u"
    },
    "source": [
     "## 其他可选内容\n",
     "\n",
-    "其他更多内容包括各种AI顶会，见 https://sites.google.com/view/causal-inference-zerotoall/conferences ，其中微软 KDD2018 tutorial 就特别清晰易懂。\n",
+    "- 其他更多内容包括各种AI顶会，见 https://sites.google.com/view/causal-inference-zerotoall/conferences ，其中微软 KDD2018 tutorial 就特别清晰易懂。\n",
+    "- Causal Inference and Counterfactual Reasoning,  Proceedings of the 7th ACM IKDD\n",
+    "https://dl.acm.org/doi/abs/10.1145/3371158.3371231 ,微软因果团队\n",
     "\n",
     "也可以包括其他的因果教材：https://sites.google.com/view/causal-inference-zerotoall/bookscourses"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "Collapsed": "false",
+    "colab_type": "text",
+    "id": "mve_G9g425bE"
+   },
+   "source": [
+    "### 瑞东推荐\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "Collapsed": "false",
+    "colab_type": "text",
+    "id": "Mn_64WCG3GOM"
+   },
+   "source": [
+    "[Causal inference and the data-fusion problem by Elias Bareinboim and Judea Pearl](https://www.pnas.org/content/113/27/7345)\n",
+    "\n",
+    "（提出了因果推理任务中数据融合问题的理论解决方案。）We review concepts, principles, and tools that unify current approaches to causal analysis and attend to new challenges presented by big data. In particular, we address the problem of data fusion—piecing together multiple datasets collected under heterogeneous conditions (i.e., different populations, regimes, and sampling methods) to obtain valid answers to queries of interest. The availability of multiple heterogeneous datasets presents new opportunities to big data analysts, because the knowledge that can be acquired from combined data would not be possible from any individual source alone. However, the biases that emerge in heterogeneous environments require new analytical tools. Some of these biases, including confounding, sampling selection, and cross-population biases, have been addressed in isolation, largely in restricted parametric models. We here present a general, nonparametric framework for handling these biases and, ultimately, a theoretical solution to the problem of data fusion in causal inference tasks."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "Collapsed": "false",
+    "colab_type": "text",
+    "id": "fm4tLDzh3L-f"
+   },
+   "source": [
+    "- 因果推断所面临的问题 https://www.pnas.org/content/116/12/5311\n",
+    "\n",
+    "Coupled human and natural systems (CHANS) are complex, dynamic, interconnected systems with feedback across social and environmental dimensions. This feedback leads to formidable challenges for causal inference. Two significant challenges involve assumptions about excludability and the absence of interference. These two assumptions have been largely unexplored in the CHANS literature, but when either is violated, causal inferences from observable data are difficult to interpret. To explore their plausibility, structural knowledge of the system is requisite, as is an explicit recognition that most causal variables in CHANS affect a coupled pairing of environmental and human elements. In a large CHANS literature that evaluates marine protected areas, nearly 200 studies attempt to make causal claims, but few address the excludability assumption. To examine the relevance of interference in CHANS, we develop a stylized simulation of a marine CHANS with shocks that can represent policy interventions, ecological disturbances, and technological disasters. Human and capital mobility in CHANS is both a cause of interference, which biases inferences about causal effects, and a moderator of the causal effects themselves. No perfect solutions exist for satisfying excludability and interference assumptions in CHANS. To elucidate causal relationships in CHANS, multiple approaches will be needed for a given causal question, with the aim of identifying sources of bias in each approach and then triangulating on credible inferences. Within CHANS research, and sustainability science more generally, the path to accumulating an evidence base on causal relationships requires skills and knowledge from many disciplines and effective academic-practitioner collaborations.\n",
+    "\n",
+    "人类和自然系统耦合（CHANS）是复杂，动态，相互联系的系统，具有跨社会和环境维度的反馈。这种反馈导致因果推理面临巨大挑战。两项重大挑战涉及关于排他性和不存在干扰的假设。这两个假设在CHANS文献中尚未得到充分探讨，但是当其中任何一个被违反时，来自可观察数据的因果推论都难以解释。为了探索其合理性，必须具备系统的结构知识，并且明确认识到CHANS中的大多数因果变量会影响环境元素和人为元素的配对。在CHANS大量评估海洋保护区的文献中，近200项研究试图提出因果关系主张，但很少涉及可排除性假设。为了检查CHANS中干扰的相关性，我们开发了具有变化的海洋CHANS的程式化模拟，可以代表政策干预，生态干扰和技术灾难。CHANS中的人力和资本流动既是造成因果关系推论的干扰原因，又是因果关系本身的调节器。尚无完美的解决方案可满足CHANS中的排他性和干扰假设。为了阐明CHANS中的因果关系，对于给定的因果问题，将需要多种方法，目的是找出每种方法中偏见的来源，然后对可信的推论进行三角剖分。在CHANS研究以及更广泛的可持续性科学中，基于因果关系积累证据的方法需要许多学科的技能和知识以及有效的学术与实践合作。"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "Collapsed": "false",
+    "colab_type": "text",
+    "id": "G8avL0cYUfGq"
+   },
+   "source": [
+    "- Partial cross mapping eliminates indirect causal influences https://www.nature.com/articles/s41467-020-16238-0\n",
+    "\n",
+    "Causality detection likely misidentifies indirect causations as direct ones, due to the effect of causation transitivity. Although several methods in traditional frameworks have been proposed to avoid such misinterpretations, there still is a lack of feasible methods for identifying direct causations from indirect ones in the challenging situation where the variables of the underlying dynamical system are non-separable and weakly or moderately interacting. Here, we solve this problem by developing a data-based, model-independent method of partial cross mapping based on an articulated integration of three tools from nonlinear dynamics and statistics: phase-space reconstruction, mutual cross mapping, and partial correlation. We demonstrate our method by using data from different representative models and real-world systems. As direct causations are keys to the fundamental underpinnings of a variety of complex dynamics, we anticipate our method to be indispensable in unlocking and deciphering the inner mechanisms of real systems in diverse disciplines from data.\n",
+    "\n",
+    "由于因果可传递性的影响，因果关系检测可能会将间接因果误判为直接因果。尽管在传统框架中已经提出了几种避免这种误解的方法，但是在具有挑战性的情况下，潜在动力系统的变量是不可分离的，并且是弱相互作用或中等相互作用的，在这种情况下仍然缺乏从间接原因中识别直接原因的可行方法。在这里，我们通过开发phase-space reconstruction 来解决这个问题，这是非线性动力学和统计学中三种工具的清晰整合：相空间重构，相互交叉映射和局部相关。我们通过使用来自不同代表性模型和实际系统的数据来演示我们的方法。由于直接因果关系是各种复杂动力学的基本基础的关键，因此，我们希望我们的方法对于从数据中解锁和解密不同学科中的实际系统的内部机制必不可少。"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "Collapsed": "false",
+    "colab_type": "text",
+    "id": "BPG6bLapbbOM"
+   },
+   "source": [
+    "## 工业应用\n",
+    "\n",
+    "\n",
+    "简单解释一下工业界对于因果推断的需求:\n",
+    "一类很通用的问题就是, 一个用户没有下单, 假设我给他/她发了个优惠券, 就会下单吗?\n",
+    "另一个用户下了单, 如果给的优惠更少一点, 还会下单吗? 这些其实都可以归为\"反事实\"的问题.\n",
+    "如果背后存在一个因果模型的话, 回答这类问题都会得心应手, 而且是符合人类直觉, 具有可解释性的.\n",
+    "这些问题都会直接影响核心经营, 所以受到重视是很自然的.\n",
+    "\n",
+    "如果这类问题没有相应的论文，我们也可以就具体的互联网案例进行讨论和分析\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "Collapsed": "false",
+    "colab_type": "text",
+    "id": "O3JAFQhDh_25"
+   },
+   "source": [
+    "- [Causal Inference and Recommendation Systems]() David M. BleiDepartments of Computer Science and StatisticsData Science InstituteColumbia University, 一个很好的讲解 PPT。\n",
+    "\n",
+    "\n",
+    "- [Correcting for Self-selection in Product Rating: Causal Recommender Systems\n",
+    "Authors: Karolina Grubinska & Médéric Thomas](https://humboldt-wi.github.io/blog/research/applied_predictive_modeling_19/causalrecommendersystem/)\n",
+    "- [Causal Embeddings for Recommendation]() by Stephen Bonner∗Criteo AI Labs"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "Collapsed": "false",
+    "colab_type": "text",
+    "id": "USvRjc2IcfKN"
+   },
+   "source": [
+    "\n",
+    "- [因果推断在阿里文娱用户增长中的应用](https://mp.weixin.qq.com/s/oZTU7TAEf-gYzlSXdt0_BA)\n",
+    "- [阿里文娱智能营销增益模型 (Uplift Model) 技术实践](https://www.6aiq.com/article/1585121131929?p=1&m=0)\n",
+    "\n",
+    "基于因果推断的推荐算法、基于双 pid 的动态报价算法以及基于 uplift model 的营销增益模型正是应用在这两大业务体系中的，我们已经在多个业务场景中取得了较为显著的效果提升，我们相信其中的一些技术必将对整个互联网业内在增长算法体系带来一些崭新的视角、思考和实践经验。本文将主要为大家介绍基于因果推断的推荐算法。\n",
+    "\n",
+    "基于因果推断的推荐算法我们已经成功应用在消息推送 ( push ) 以及 dsp 外投买量算法等业务中，而在营销场景中应用的 uplift 模型本质上也是因果推断思想的一个典型应用。因此，我们在整个用户增长以及智能营销的业务场景中逐步推广地应用了因果推断的思想，在某些实验中取得了非常好的业务结果，比如我们在 push 和 dsp 业务中的沉默用户召回这个场景下就取得了点击量和点击率的显著提升。\n",
+    "\n",
+    "针对干预手段的研究，在2019年用户增长 & 智能营销团队组建之后，对因果推断 ( Causal Inference ) 算法率先进行了研究和落地，目前在个性化推送、外投 DSP 应用了基于 matching 的无偏 user-cf 算法，智能红包发放场景应用了 uplift model，取得了显著的核心业务指标提升，并得到了业务方和兄弟团队的一致认可。现将无偏 user-cf 算法介绍如下，uplift model 可参考文末推荐文章。"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "Collapsed": "false",
+    "colab_type": "text",
+    "id": "t5_pRCCkegHO"
+   },
+   "source": [
+    "- [基于倾向性评分法的因果推断案例：A股概念数据](https://finance.sina.com.cn/stock/stockzmt/2020-04-24/doc-iircuyvh9546023.shtml)\n",
+    "\n",
+    "本章我们将把视角转回投资领域，分析A股市场中股票所属概念和股票未来收益的因果关系。股票是否属于某个概念是一种事件型的变量，可以套用到因果推断的框架中进行研究。本文使用的基于因果推断的方法，或许能为概念/事件驱动型策略提供一套科学的研究框架。"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "Collapsed": "false",
+    "colab_type": "text",
+    "id": "_dO1D-fNfp57"
+   },
+   "source": [
+    "- [京东推荐系统中的机器学习与大规模线上实验](https://cloud.tencent.com/developer/article/1083894)\n",
+    "\n",
+    "因为一件事情的影响因素太多了，我们要知道到底是什么原因导致的成功，需要去做严格的因果推断。A/B实验是最好的因果检验工具。"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "Collapsed": "false",
+    "colab_type": "text",
+    "id": "kPqfmy-S3rri"
+   },
+   "source": [
+    "### 亦斌推荐\n",
+    "\n",
+    "- 前沿: nature刊掀起DAG热 https://mp.weixin.qq.com/s/B2FKP19491OBYmM5-u4TOw\n",
+    "-  你应该阅读哪本因果推断书籍: 一份进阶流程图和简短书评列表 https://mp.weixin.qq.com/s/T6xCgQwO6RvUG5bUILpBEg\n",
+    "\n",
+    "- 滴滴数据驱动利器：AB实验之分组提效 https://mp.weixin.qq.com/s/4B9nVSvXa8tF0YyAiOKA5g\n",
+    "- 美团配送A/B评估体系建设与实践 https://mp.weixin.qq.com/s/v3Fvp6Hed7ZGoE8FGlGMvQ"
    ]
   },
   {
    "cell_type": "code",
    "execution_count": null,
    "metadata": {
-    "Collapsed": "false"
+    "Collapsed": "false",
+    "colab": {},
+    "colab_type": "code",
+    "id": "fW4LAT1z7j_v"
    },
    "outputs": [],
    "source": []
   }
  ],
  "metadata": {
+  "colab": {
+   "collapsed_sections": [],
+   "name": "01-quick_survey.ipynb",
+   "provenance": [],
+   "toc_visible": true
+  },
   "kernelspec": {
    "display_name": "Python 3",
    "language": "python",

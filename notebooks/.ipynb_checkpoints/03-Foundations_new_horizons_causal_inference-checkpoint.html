@@ -1,0 +1,430 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Foundations and new horizons for causal inference &mdash; CausalAI CausalAI 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html">
+          
+
+          
+            
+            <img src="../../_static/causalAI.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                CausalAI 0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">README:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../readme/pre.html">集智因果读书会项目说明</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../readme/pre.html#causal-ai">Causal AI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../readme/pre.html#id2">常见问题集</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../readme/01-quick_survey.html">读书会论文和教材清单</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../readme/01-quick_survey.html#Judea-Pearl">Judea Pearl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../readme/01-quick_survey.html#Bernhard-Scholkopf">Bernhard Scholkopf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../readme/01-quick_survey.html#Yousha-Bengio">Yousha Bengio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../readme/01-quick_survey.html#综述文章">综述文章</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../readme/01-quick_survey.html#其他可选内容">其他可选内容</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../readme/01-quick_survey.html#瑞东推荐">瑞东推荐</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../readme/01-quick_survey.html#工业应用">工业应用</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../readme/01-quick_survey.html#亦斌推荐">亦斌推荐</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../readme/02-time_series_causal_inference.html">时间序列因果推断</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../readme/02-time_series_causal_inference.html#博客综述-by-Shay-Palachy">博客综述 by Shay Palachy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../readme/02-time_series_causal_inference.html#经济学中的因果推断">经济学中的因果推断</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">读书会</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../01-pearl.html">Judea Pearl</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02_OneCausality.html">One Causality</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../02_OneCausality.html#Judea-Pearl">Judea Pearl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02_OneCausality.html#Seven-Tools">Seven Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02_OneCausality.html#Video:-The-new-science-of-cause-inference">Video: The new science of cause inference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02_OneCausality.html#Slide">Slide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02_OneCausality.html#一个会议">一个会议</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02_OneCausality.html#Tutorial">Tutorial</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../03-Foundations_new_horizons_causal_inference.html">Foundations and new horizons for causal inference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../03-Foundations_new_horizons_causal_inference.html#快速开始">快速开始</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../03-Foundations_new_horizons_causal_inference.html#数据可续三原则：可预测，可计算，稳健(PCS)">数据可续三原则：可预测，可计算，稳健(PCS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../03-Foundations_new_horizons_causal_inference.html#Questions-about-ML-and-AI">Questions about ML and AI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../03-Foundations_new_horizons_causal_inference.html#可识别性">可识别性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../03-Foundations_new_horizons_causal_inference.html#中介分析">中介分析</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../03-Foundations_new_horizons_causal_inference.html#选择偏差">选择偏差</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../03-Foundations_new_horizons_causal_inference.html#缺失数据处理">缺失数据处理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../03-Foundations_new_horizons_causal_inference.html#因果一致性和表示学习">因果一致性和表示学习</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../03-Foundations_new_horizons_causal_inference.html#翻译内容">翻译内容</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../03-Foundations_new_horizons_causal_inference.html#talk1">talk1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../03-Foundations_new_horizons_causal_inference.html#talk2">talk2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../03-Foundations_new_horizons_causal_inference.html#talk3">talk3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../03-Foundations_new_horizons_causal_inference.html#talk4">talk4</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../03-Foundations_new_horizons_causal_inference.html#talk5">talk5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../03-Foundations_new_horizons_causal_inference.html#talk6">talk6</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../03-Foundations_new_horizons_causal_inference.html#talk7">talk7</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../03-Foundations_new_horizons_causal_inference.html#talk8">talk8</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CausalAI</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Foundations and new horizons for causal inference</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/notebooks/.ipynb_checkpoints/03-Foundations_new_horizons_causal_inference-checkpoint.ipynb.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="Foundations-and-new-horizons-for-causal-inference">
+<h1>Foundations and new horizons for causal inference<a class="headerlink" href="#Foundations-and-new-horizons-for-causal-inference" title="Permalink to this headline">¶</a></h1>
+<p>本文是翻译 workshop 论文的工作。</p>
+<p>Bernhard等人欧洲团队的“Foundations and new horizons for causal inference”研讨会特别好！The talks and discussions at the workshop will help to shape the field in the coming years.</p>
+<div class="section" id="快速开始">
+<h2>快速开始<a class="headerlink" href="#快速开始" title="Permalink to this headline">¶</a></h2>
+<p>（因果推断始于经济和生物统计等学科，它刚刚才开始成为人工智能的一个重要工具，数学基础依旧很零碎）While causal inference is established in some disciplines such as econometrics and biostatistics, it is only starting to emerge as a valuable tool in areas such as machine learning and artificial intelligence. The mathematical foundations of causal inference are fragmented at present.</p>
+<p>（本研讨会的目的是解决上面问题）The aim of the workshop Foundations and new horizons for causal inference was to - unify existing approaches and mathematical foundations as well as - exchange ideas between different fields.</p>
+<p>We regard this workshop as successful in that it brought together researchers from different disciplines who were able to learn from each other not only about different formulations of related problems, but also about solutions and methods that exist in the different fields.</p>
+<p>该研讨会的目标之一是召集来自不同领域的研究人员 to facilitate communication and cross-pollination. 在这方面，研讨会无疑是非常成功的。它吸引了来自人工智能，生物统计学，计算机科学，经济学，流行病学，机器学习，数学和统计学的研究人员。New collaborations were initiated between researchers who probably would not have crossed paths were it not for this workshop. 这次成功的很大一部分原因是该研讨会是在奥伯沃尔法赫数学大师的主持下举行的。Four broad areas of causal inference were discussed at the workshop.</p>
+<ul class="simple">
+<li><p>Mathematical foundations. 纯粹的统计模型旨在描述数据生成过程的基础分布。 然而，因果模型超越了这个目标，尝试建立该系统扰动的模型。<strong>Formulating such models, including the notion of interventions, thus lies at the core of causality research.</strong> Even though several frameworks exist, this is still a topic of current research, in particular, when considering dynamical models, extreme valued processes or the question of which variables to include in the model, say. Talks covering this topic
+include the ones from Niels Hansen, Dominik Janzing, Steffen Lauritzen, Karthika Mohan, Emilija Perkovic, Rajen Shah, Ilya Shpitser, Jin Tian, and Sebastian Weichwald.</p></li>
+<li><p>Causal discovery. 尽管许多因果推论方法都假定因果模型为已知的因果结构（通常是有向无环图），但使用因果发现从复杂数据（例如生物学应用中的时间序列）估算结构方面也引起了人们的极大兴趣。 Research goals include to develop methods that are robust with respect to model misspecification, scale to large data sets, deal with the existence of hidden variables or incorporate the information of interventional experiments. Talks covering this topic include the ones from Mathias Drton, Aapo Hyvarinen, Nicola
+Gnecco, Marloes Maathuis, Linbo Wang, and Kun Zhang.</p></li>
+<li><p>Machine Learning and causality. There is growing interest to adjust Machine Learning methods from a purely association-based learning approach towards causal inference. The hope is to obtain methods for classical machine learning problems such as prediction or semi-supervised learning that generalize better to test data (that may come from the same or from a related distribution as the training data) or are more sample- efficient. Moreover, causality can provide means to better understand
+classical machine learning paradigms and their applicability.</p></li>
+<li><p>Applications. Numerous applications were discussed, including personalised medicine, biological causal network discovery and climate science. Talks covering applications include the ones from Gregory Cooper, Sara Geneletti, Jakob Runge, and Sach Mukherjee.</p></li>
+</ul>
+<p>（机器学习方法目前已成功应用于许多方面）Machine learning methods are currently successfully applied to a wide range of applications. Impressive empirical results are obtained in areas such as image classification or speech recognition. Many scientific problems, however, go beyond the task of iid prediction. In some domains such as public health, biology or Earth system science, we are usually interested in finding policies that yield a better outcome. In other areas, we expect that the test data
+will differ significantly from the training data. Causal concepts have the potential to play a role in solving many of these problems. We therefore expect to see more research on causality. While many of the goals connected to research on causality are ambitious, any advance in this area will potentially have a large impact not only in mathematics but in the natural sciences in general（因果一领域的任何进步都可能对数学以及整个自然科学产生巨大影响）.</p>
+<p>研讨会召集了因果推理方面的专家，他们从事计量经济学，机器学习，统计学和自然科学的基础和应用。研讨会上的报告和讨论将有助于在未来几年内塑造这一领域。</p>
+<ul class="simple">
+<li><p>Bin Yu, Hypothesis generation through 数据科学的三项原则: predictability, computability and stability (PCS)</p></li>
+<li><p>Gregory F. Cooper, Instance-Specific Causal Bayesian Network Structure Learning</p></li>
+<li><p>Sach Mukherjee, Towards scalable causal learning</p></li>
+<li><p>Linbo Wang, Causal Inference with Unmeasured Confounding: A New Look at Instrumental Variable</p></li>
+<li><p>Kun Zhang, Towards more reliable causal discovery and prediction</p></li>
+<li><p>L ́eon Bottou, Questions about ML and AI</p></li>
+<li><p>David Blei, The Blessing of Multiple Causes: Extended Abstract</p></li>
+<li><p>Ilya Shpitser, Identification And Estimation Via A Modified Factorization Of A Graphical Model</p></li>
+<li><p>Christina Heinze-Deml, Conditional variance penalties and domain shift robustness</p></li>
+<li><p>Dominik Janzing, Causal Regularization</p></li>
+<li><p>Vanessa Didelez, Causal mediation with longitudinal mediator and survival outcome</p></li>
+<li><p>Jin Tian (joint with Juan D. Correa, Elias Bareinboim) Identification of Causal Effects in the Presence of Selection Bias … … 50</p></li>
+<li><p>Emilija Perkovi ́c (joint with Leonard Henckel, Marloes H. Maathuis) Graphical criteria for efficient total effect estimation in causal linear models</p></li>
+<li><p>Karthika Mohan, Graphical Models for Missing Data</p></li>
+<li><p>Julius von Ku ̈gelgen, Semi-Supervised Learning, Causality and the Conditional Cluster Assumption</p></li>
+<li><p>Sebastian Weichwald, Causal Consistency of SEMs &amp; Causal Models as Posets of Distributions</p></li>
+<li><p>Michele Sebag, Structural agnostic modeling: An information theoretic approach to causal learning</p></li>
+</ul>
+<div class="section" id="数据可续三原则：可预测，可计算，稳健(PCS)">
+<h3>数据可续三原则：可预测，可计算，稳健(PCS)<a class="headerlink" href="#数据可续三原则：可预测，可计算，稳健(PCS)" title="Permalink to this headline">¶</a></h3>
+<p>(我提出一个 PCS 框架, 被ML启发，用稳健性增加可预测性和可计算性)We propose a framework in [4] that draws from three principles of data science: predictability, computability, and stability (PCS) to extract reliable, reproducible information from data and guide scientific hypothesis generation. The PCS framework builds on key ideas in machine learning, using predictability as a reality check and evaluating computational considerations in data collection, data storage, and algorithm design. <strong>It
+augments predictability and computability with an overarching stability principle</strong>, which expands statistical uncertainty considerations to assesses how results vary with respect to choices (or perturbations) made across the data science life cycle.</p>
+<p>（迭代随机森林）As a case study of PCS, we propose in [2] iterative Random Forests (iRF). Genomics has revolutionized biology, enabling the interrogation of whole tran- scriptomes, genome-wide binding sites for proteins, and many other molecular processes.</p>
+</div>
+<div class="section" id="Questions-about-ML-and-AI">
+<h3>Questions about ML and AI<a class="headerlink" href="#Questions-about-ML-and-AI" title="Permalink to this headline">¶</a></h3>
+<p>L ́eon Bottou, Questions about ML and AI</p>
+<p>本报告的目的是 to explain the relevance of causation to research in artificial intelligence.</p>
+<p>(ML 和 AI 之间存在鸿沟。第一部分说明ML中需要问题是因果问题，第二部分说明因果为AI提供了路线图)Despite the promises of pundits, there is indeed a large gap between the technological capabilities of machine learning (ML) and the vague and elusive goals of artificial intelligence (AI). The first part of the talk reviews some of the common issues with ML methods and shows how they display many of the characteristic issues one encounters in causal inference research. The second part of the talk is an
+attempt to name many of the nuances of causation in the hope to provide a roadmap to approach artificial intelligence.</p>
+<ul class="simple">
+<li><p>Success and shortcomings of ML， 优点和缺点非常清楚！</p></li>
+</ul>
+<p>In conclusion, although they can precisely replicate the observed training distribution, ML systems lack in common sense because they cannot easily infer what could have been observed under closely related circumstances.</p>
+<ul class="simple">
+<li><p>The many faces of causation</p></li>
+</ul>
+<p>On the one hand, the above description of the ML shortcomings emphasizes their similarity with fundamental issues in causation. On the other hand, none of these problems come with a causal graph or with well defined interventions. This means that we may not be able to understand them using solely the manipulative definition of causation that is common statistics. Fortunately, an abundant literature in epistemology, metaphysics, and psychology offers alternative ways to understand causation, a
+catalogue of ideas for future research. The following is an attempt to name some of them.</p>
+<p>一方面，以上对ML缺点的描述强调了它们与因果关系中基本问题的相似性。另一方面，none of these problems come with a causal graph or with well defined interventions. 这意味着我们可能无法仅使用常见统计的因果关系的操纵性定义来理解它们。幸运的是，认识论，形而上学和心理学方面的大量文献提供了理解因果关系的替代方法，因果关系是未来研究的思路可能选项。The following is an attempt to name some of them.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Manipulative causation focuses on predicting the outcome of well defined interventions on a causal system.</p></li>
+<li><p>Causal invariance investigates which properties of a system are conserved when affected by explicit or implicit interventions.</p></li>
+<li><p>Causal reasoning focuses on causal statements as elements of reasoning chains. Statements that cannot be verified experimentally acquire value when they take part in chains that make verifiable predictions.</p></li>
+<li><p>Causal explanation provides causal commentaries that help understanding an observed phenomena but may not be complete enough to make sensible predictions [11].</p></li>
+<li><p>Dispositional causation and affordances associates objects with the causal relationship they enable [8, 4].</p></li>
+<li><p>Causal intuition take advantage of observed data to suggest short lists of plausible causal models whose validity can later be investigated using more direct experiments.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="可识别性">
+<h3>可识别性<a class="headerlink" href="#可识别性" title="Permalink to this headline">¶</a></h3>
+<p>Ilya Shpitser, Identification And Estimation Via A Modified Factorization Of A Graphical Model</p>
+<p>众所周知，在没有 hidden common causes 的情况下，可以通过称为g公式的 truncated factorization 来识别因果效应。我们的工作表明，</p>
+<ul class="simple">
+<li><p>much of modern non-parametric identification theory may be rephrased as a more complex truncated factorization derived from the factorization of the observed marginal of a hidden variable graphical model defining the nested Markov model.</p></li>
+<li><p>Further, viewing identified functionals as a modified factorization directly leads to maximum likelihood inference for causal parameters in hidden variable models.</p></li>
+</ul>
+<p>The nested Markov model is defined on an acyclic directed mixed graph (ADMG) obtained from a hidden variable DAG by the latent projection operation [5].</p>
+</div>
+<div class="section" id="中介分析">
+<h3>中介分析<a class="headerlink" href="#中介分析" title="Permalink to this headline">¶</a></h3>
+<p>In causal mediation analysis, we are interested in understanding different mechanisms (causal pathways) of a treatment or exposure affecting some outcomes. Often this is formalised in terms of (in)direct causal effects — popular notions of these are based on so-called ‘nested counterfactuals’, <span class="math notranslate nohighlight">\(Y(a, M(a'))\)</span>. Identification relies crucially on a cross-world independence <span class="math notranslate nohighlight">\(Y(a,m)⊥M(a′)\)</span>. <strong>Because of this, the concepts of natural (in)direct effects run into difficulties of
+interpretation in the particular context of survival analyses</strong>, where <span class="math notranslate nohighlight">\(Y\)</span> is a survival time and the mediator is a whole process <span class="math notranslate nohighlight">\(\{M_t\}\)</span>. These problems are:</p>
+<ul class="simple">
+<li><p>Problem 1: If survival is shorter, say, under <span class="math notranslate nohighlight">\(A = a′\)</span> than under <span class="math notranslate nohighlight">\(A = a\)</span>, then the second index of <span class="math notranslate nohighlight">\(Y(a, M_t(a′))\)</span> is ‘incomplete’; the nested counterfactual is not well-defined.</p></li>
+<li><p>Problem 2: Later survival as well as later measurements of the mediator process depend on prior survival. Hence, prior survival acts like a post-treatment confounder and, so, identifiability fails.</p></li>
+</ul>
+<p>In this work, I propose an alternative approach that does not suffer from such shortcomings [1]: this novel approach follows Robins and Richardson [2], where mechanisms need to be specified allowing a separation into the different treatment paths, formalized using an augmented directed acyclic graph (DAG).</p>
+<p>The proposed new approach solves a crucial conceptual problem of mediation analysis with a survival outcome and can be extended to yield much needed clar- ification in competing risks settings [4]. It is founded in decision theory, avoids genuine counterfactual (cross-world) assumptions and, even in non-survival con- texts, constitutes an interesting alternative to the prevailing structural equation modelling.</p>
+</div>
+<div class="section" id="选择偏差">
+<h3>选择偏差<a class="headerlink" href="#选择偏差" title="Permalink to this headline">¶</a></h3>
+<p>Cause-and-effect relations are one of the most valuable types of knowledge sought after throughout the data-driven sciences since they translate into stable and generalizable explanations as well as efficient and robust decision-making capabilities. Inferring these relations from observational data, however, is a challenging task. Two of the most common barriers to this goal are known as confounding and se- lection biases. The former stems from the systematic bias introduced during the treatment
+assignment, while the latter comes from the systematic bias during the collection of units into the sample. We consider the problem of identifying causal effects when both confounding and selection biases are simultaneously present. Specifically, given qualitative causal assumptions in the form of a causal graph G and observational distribution P (possible under confounding bias and selection bias), we study whether a causal effect P(y|do(x)) is computable from P.</p>
+</div>
+<div class="section" id="缺失数据处理">
+<h3>缺失数据处理<a class="headerlink" href="#缺失数据处理" title="Permalink to this headline">¶</a></h3>
+<p>Graphical Models for Missing Data</p>
+<p>Missing data (also known as incomplete data) are data in which values of one or more variables in a dataset are observed for some samples and missing for the rest. Missingness, which is a rather common phenomenon in practice, can occur due to several reasons such as an ill-designed questionnaire and reluctance of subjects to answer questions on sensitive topics (e.g. income, religion, sexual orientation etc.). Table 1 exemplifies a dataset over two variables in the ideal scenario of no
+missingness, whereas table 2 exemplifies a dataset with missing values that one would find in the real world. m in table 2 denotes a missing value.</p>
+</div>
+<div class="section" id="因果一致性和表示学习">
+<h3>因果一致性和表示学习<a class="headerlink" href="#因果一致性和表示学习" title="Permalink to this headline">¶</a></h3>
+<p>Causal Consistency of SEMs &amp; Causal Models as Posets of Distributions</p>
+<p>We can often describe the same system with reference to different terminology, levels of detail, and concepts. We can, for example, reason about individual neurons’ firing rates, about average blood oxygen levels in different brain regions, or about electromagnetic activity of so-called cortical dipoles and about how any of those maintain faster reaction times or certain movements. <strong>We discuss the following conceptual challenge that is fundamental to causal modelling of real-world systems such
+as, for example, the brain: (因果表示问题)</strong>How can we formally characterise the relata, aggregate features, and representations that are suitable for a pragmatically useful causal model and how do different description levels relate to one another? The variables we can and do measure do not necessarily lend themselves as is for a causal description.</p>
+<p>This take on the interplay between causal reasoning and variable transforma- tions enables one to in principle consider and identify transformations that exhibit desired properties, e. g. that allow for ‘simpler’ (in terms of complexity), more ‘interpretable’ (in terms one would need to define precisely), or more ‘robust’ (against interventional regime changes) causal models as compared to using the plain observed variables. For example, [2] considers the consistent abstraction of causal models
+via appropriate variable transformations. Robustness to domain shifts resulting from interventions is considered in [3]: <strong>The authors argue in favour of a representation that is consistent with the underlying causal structure in order for a learner to adapt faster to new environments and to thus obtain good transfer.(Bengio 的因果表示学习)</strong> Future research may discuss how to soften the restrictive requirements for a transformation to be exact and how to sensibly arrive at a notion of
+approximate transformations and a meaningful causal interpretation thereof.</p>
+</div>
+</div>
+<div class="section" id="翻译内容">
+<h2>翻译内容<a class="headerlink" href="#翻译内容" title="Permalink to this headline">¶</a></h2>
+<p>本节开始翻译研讨会的每个报告。</p>
+<div class="section" id="talk1">
+<h3>talk1<a class="headerlink" href="#talk1" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="talk2">
+<h3>talk2<a class="headerlink" href="#talk2" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="talk3">
+<h3>talk3<a class="headerlink" href="#talk3" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="talk4">
+<h3>talk4<a class="headerlink" href="#talk4" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="talk5">
+<h3>talk5<a class="headerlink" href="#talk5" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="talk6">
+<h3>talk6<a class="headerlink" href="#talk6" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="talk7">
+<h3>talk7<a class="headerlink" href="#talk7" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="talk8">
+<h3>talk8<a class="headerlink" href="#talk8" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, CausalAI
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

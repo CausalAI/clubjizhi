@@ -26,6 +26,8 @@
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/language_data.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -37,7 +39,7 @@
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Judea Pearl" href="../notebooks/01-pearl.html" />
+    <link rel="next" title="时间序列因果推断" href="02-time_series_causal_inference.html" />
     <link rel="prev" title="集智因果读书会项目说明" href="pre.html" /> 
 </head>
 
@@ -111,6 +113,11 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="02-time_series_causal_inference.html">时间序列因果推断</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="02-time_series_causal_inference.html#博客综述-by-Shay-Palachy">博客综述 by Shay Palachy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02-time_series_causal_inference.html#经济学中的因果推断">经济学中的因果推断</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">读书会</span></p>
 <ul>
@@ -122,6 +129,30 @@
 <li class="toctree-l2"><a class="reference internal" href="../notebooks/02_OneCausality.html#Slide">Slide</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../notebooks/02_OneCausality.html#一个会议">一个会议</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../notebooks/02_OneCausality.html#Tutorial">Tutorial</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/03-Foundations_new_horizons_causal_inference.html">Foundations and new horizons for causal inference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/03-Foundations_new_horizons_causal_inference.html#快速开始">快速开始</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/03-Foundations_new_horizons_causal_inference.html#数据可续三原则：可预测，可计算，稳健(PCS)">数据可续三原则：可预测，可计算，稳健(PCS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/03-Foundations_new_horizons_causal_inference.html#Questions-about-ML-and-AI">Questions about ML and AI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/03-Foundations_new_horizons_causal_inference.html#可识别性">可识别性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/03-Foundations_new_horizons_causal_inference.html#中介分析">中介分析</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/03-Foundations_new_horizons_causal_inference.html#选择偏差">选择偏差</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/03-Foundations_new_horizons_causal_inference.html#缺失数据处理">缺失数据处理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/03-Foundations_new_horizons_causal_inference.html#因果一致性和表示学习">因果一致性和表示学习</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../notebooks/03-Foundations_new_horizons_causal_inference.html#翻译内容">翻译内容</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/03-Foundations_new_horizons_causal_inference.html#talk1">talk1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/03-Foundations_new_horizons_causal_inference.html#talk2">talk2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/03-Foundations_new_horizons_causal_inference.html#talk3">talk3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/03-Foundations_new_horizons_causal_inference.html#talk4">talk4</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/03-Foundations_new_horizons_causal_inference.html#talk5">talk5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/03-Foundations_new_horizons_causal_inference.html#talk6">talk6</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/03-Foundations_new_horizons_causal_inference.html#talk7">talk7</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../notebooks/03-Foundations_new_horizons_causal_inference.html#talk8">talk8</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -457,7 +488,7 @@ div.rendered_html tbody tr:hover {
 </ul>
 <p>论文 The Seven Tools of Causal Inference with Reflections on Machine Learning 首先总结了当前AI面临的三个主要困难，指出教会机器因果推理能够解决这些困难。然后提出构建因果引擎的三级因果思维，指出当前机器学习算法都停留在第一个层面。最后综述了因果研究的七大方面内容。</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -467,7 +498,8 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
 <iframe
@@ -484,7 +516,7 @@ div.rendered_html tbody tr:hover {
 <p>Bernhard Scholkopf 有两篇必读的论文，被 Judea Pearl 亲自 twitter 点赞，并且该点赞被 Bernhard SCholkopf 立刻挂在了自己的个人主页炫耀。</p>
 <ul class="simple">
 <li><p>Causality for Machine Learning, Bernhard Schölkopf, 2019</p></li>
-<li></li>
+<li><p>因果推理的基础和新视野 by Bernhard Scholkopf 等团队 The workshop Foundations and new horizons for causal inference, organised by Nicolai Meinshausen (ETH Zurich), Jonas Peters (University of Copenhagen), Thomas Richardson (University of Washington) and Bernhard Scho ̈lkopf (MPI Tu ̈bingen) was well attended with 52 participants from a broad geographic back- ground.</p></li>
 </ul>
 <p>一个本结合机器学习和因果研究的教材</p>
 <ul class="simple">
@@ -513,7 +545,8 @@ div.rendered_html tbody tr:hover {
 <li><p><a class="reference external" href="https://arxiv.org/abs/1809.09337">A Survey of Learning Causality with Data: Problems and Methods 2019 arxiv</a></p></li>
 </ul>
 <p>（该论文全面的介绍了因果和机器学习的融合）The era of big data provides researchers with convenient access to copious data. However, people often have little knowledge about it. The increasing prevalence of big data is challenging the traditional methods of learning causality because they are developed for the cases with limited amount of data and solid prior causal knowledge. This survey aims to close the gap between big data and learning causality with a comprehensive and structured review of
-traditional and frontier methods and a discussion about some open problems of learning causality. We begin with preliminaries of learning causality. Then we categorize and revisit methods of learning causality for the typical problems and data types. After that, we discuss the connections between learning causality and machine learning. At the end, some open problems are presented to show the great potential of learning causality with data.</p>
+traditional and frontier methods and a discussion about some open problems of learning causality. We begin with preliminaries of learning causality. Then we categorize and revisit methods of learning causality for the typical problems and data types. After that, we discuss the connections between learning causality and machine learning. At the end, some open problems are presented to show the great potential of learning causality with data.
+<a class="reference external" href="https://github.com/rguo12/awesome-causality-algorithms">github</a></p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://arxiv.org/abs/2002.02770">A Survey on Causal Inference</a> AAAI 2020 tutorial</p></li>
 </ul>
@@ -522,10 +555,17 @@ traditional and frontier methods and a discussion about some open problems of le
 <li><p><a class="reference external" href="https://www.google.com/url?q=https%3A%2F%2Fwww.sciencedirect.com%2Fscience%2Farticle%2Fpii%2FS2095809919305235&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNEOBzdVT-UAwK3xkNxqFLNeVVeArA">Causal Inference</a></p></li>
 </ul>
 <p>该综述文章由八位华人因果研究人员 Kun Kuang Wang Miao Peng Ding Huaxin Huang LIAO Beishui Kun Zhang Lei Xu Zhi Geng 共同撰写。主要特点是非常简短清晰的介绍了 CPT 理论等前沿理论，关键是有中文版。</p>
+<p>其他文章</p>
+<ul class="simple">
+<li><p>论文 A Second Chance to Get Causal Inference Right: A Classification of Data Science Tasks 值得一看，论文地址 <a class="reference external" href="https://amstat.tandfonline.com/doi/full/10.1080/09332480.2019.1579578#.XNLtxOszbOR">https://amstat.tandfonline.com/doi/full/10.1080/09332480.2019.1579578#.XNLtxOszbOR</a> 以及笔记 <a class="reference external" href="https://colab.research.google.com/drive/1rr2-EJ9yk117hdejTIvx2jWjaBbjsGsO?usp=sharing">https://colab.research.google.com/drive/1rr2-EJ9yk117hdejTIvx2jWjaBbjsGsO?usp=sharing</a> 本文说明了 The scientific contributions of data science can be organized into three classes of tasks: description, prediction, and counterfactual prediction.</p></li>
+</ul>
 </div>
 <div class="section" id="其他可选内容">
 <h2>其他可选内容<a class="headerlink" href="#其他可选内容" title="Permalink to this headline">¶</a></h2>
-<p>其他更多内容包括各种AI顶会，见 <a class="reference external" href="https://sites.google.com/view/causal-inference-zerotoall/conferences">https://sites.google.com/view/causal-inference-zerotoall/conferences</a> ，其中微软 KDD2018 tutorial 就特别清晰易懂。</p>
+<ul class="simple">
+<li><p>其他更多内容包括各种AI顶会，见 <a class="reference external" href="https://sites.google.com/view/causal-inference-zerotoall/conferences">https://sites.google.com/view/causal-inference-zerotoall/conferences</a> ，其中微软 KDD2018 tutorial 就特别清晰易懂。</p></li>
+<li><p>Causal Inference and Counterfactual Reasoning, Proceedings of the 7th ACM IKDD <a class="reference external" href="https://dl.acm.org/doi/abs/10.1145/3371158.3371231">https://dl.acm.org/doi/abs/10.1145/3371158.3371231</a> ,微软因果团队</p></li>
+</ul>
 <p>也可以包括其他的因果教材：<a class="reference external" href="https://sites.google.com/view/causal-inference-zerotoall/bookscourses">https://sites.google.com/view/causal-inference-zerotoall/bookscourses</a></p>
 <div class="section" id="瑞东推荐">
 <h3>瑞东推荐<a class="headerlink" href="#瑞东推荐" title="Permalink to this headline">¶</a></h3>
@@ -602,7 +642,7 @@ deciphering the inner mechanisms of real systems in diverse disciplines from dat
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../notebooks/01-pearl.html" class="btn btn-neutral float-right" title="Judea Pearl" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="02-time_series_causal_inference.html" class="btn btn-neutral float-right" title="时间序列因果推断" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="pre.html" class="btn btn-neutral float-left" title="集智因果读书会项目说明" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

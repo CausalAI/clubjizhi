@@ -25,6 +25,7 @@
    
    notebooks/01-pearl
    notebooks/02_OneCausality
+   notebooks/03-Foundations_new_horizons_causal_inference
 
 You can see more information about causal inference on 
 
